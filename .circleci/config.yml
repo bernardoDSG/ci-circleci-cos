@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  build-e-teste:
+    docker:
+      - image: cimg/python:3.11
+    steps:
+      - checkout
+      - run:
+          name: Instalar Flask
+          command: pip install flask
+      - run:
+          name: Executar testes automatizados do serviço
+          command: python -m unittest test_app.py
+
+workflows:
+  pipeline-cos:
+    jobs:
+      - build-e-teste
