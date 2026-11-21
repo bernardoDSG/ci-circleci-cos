@@ -7,7 +7,7 @@ def status_servico():
     return jsonify({
         "disciplina": "Computação Orientada a Serviços",
         "ferramenta": "CircleCI",
-        "status": "Serviço com defeito"
+        "status": "Serviço ativo"
     })
 
 if __name__ == "__main__":
